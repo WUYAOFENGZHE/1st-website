@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 100%;
+    height: 100vh;
+    background-color: #09203f;
+    position: fixed;
+}
+ul{
+    width: 300px;
+    height: 300px;
+
+    margin: 15% auto;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: ball 6s linear infinite alternate ;
+}
+ul:hover{ animation-play-state: paused;
+
+}
+li:hover{
+
+    box-shadow: 0 0 20px 10px inset  skyblue;
+    font: bolder  100px  "黑体" ;
+    transition-property: font-size;
+    transition-duration: 2s;
+    color: #84fab0;
+
+}
+ul>li{
+    list-style: none;
+
+    background: transparent;
+    width: 98%;
+    height: 98%;
+    position: absolute;
+    border-radius: 100%;
+    transform: rotateX(calc(18deg*var(--i)));
+    box-shadow:0 0 100px darkseagreen;
+    text-align: center;
+    line-height: 98%;
+    animation: ball1 5s linear infinite;
+    font: 0 "宋体";
+
+
+}
+@keyframes ball {
+
+    0% {transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleX(0.5) scaleY(0.5) scaleZ(0.5)
+    translateZ(0) translateX(0px) translateY(0px);
+
+
+
+    }
+    100%{
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg) scaleX(1) scaleY(1) scaleZ(1)
+    translateZ(200px) translateX(500px) translateY(200px);
+
+
+
+    }
+}
+@keyframes ball1 {
+
+    0% {
+        filter:hue-rotate(0deg);
+
+    }
+    100% {
+        filter:hue-rotate(360deg)  ;
+
+    }
+}

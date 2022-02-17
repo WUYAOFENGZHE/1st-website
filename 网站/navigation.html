@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jd navigation</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul{
+            width: 800px;
+            height: 50px;
+            background-color: #ccc;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            list-style: none;
+            margin-left: -400px;
+        }
+        ul>li{
+            float: left;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+
+        }
+        ul>li:nth-of-type(4){
+            background-color: rgba(255,255,124,1);
+        }
+        .main{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 150px;
+            border: 2px solid gold;
+            position: relative;
+
+
+        }
+        .main .img1{
+            width: 300px;
+            height: 300px;
+            position: fixed;
+
+
+        }
+        .main a:link{
+            color: white;
+        }
+        .main a:visited{
+            color: orange;
+        }
+        .main a:hover{
+            color: gold;
+            background-color: skyblue;
+        }
+        .main a:active{
+            color: tomato;
+        }
+        .main a{
+            position: absolute;
+            width: 25px;
+            height: 40px;
+            background-color:rgba(0,0,0,0.3);
+            font: lighter 40px "微软雅黑";
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        .main a:nth-of-type(1){
+            position: absolute;
+            left: 0;
+            top: 125px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <ul>
+        <li>服装城</li>
+        <li>美妆馆</li>
+        <li>京东超市</li>
+        <li>全球购</li>
+        <li>闪购</li>
+        <li>团购</li>
+        <li>拍卖</li>
+        <li>金融</li>
+    </ul>
+</div>
+<div class="main">
+    <img src="image/dishes.jpg" class="img1">
+    <a href="#">&lt;</a>
+    <a href="#">&gt;</a>
+
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>哈哈</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url("image/cloud9.png"),url(image/cloud7.png),url("image/artwork-digital-art-storm-lightning-ship-sea-2013395-wallhere.com.jpg");
+        background-size: auto 800px,auto 800px,1400px auto;
+        background-repeat: no-repeat;
+        background-position: 100% 20%, 100% 10%,0 0 ;
+        overflow: hidden;
+
+    }
+    ul{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        margin-left: -100px;
+        transform-style:preserve-3d;
+        animation: rotate 12s linear 0s infinite ;
+    }
+    ul:hover{
+        animation-play-state: paused;
+    }
+    ul:hover img{
+        opacity: 0.5;
+    }
+    ul>li>img:hover{
+        opacity: 1;
+    }
+    ul>li{
+
+        width: 200px;
+        height: 200px;
+        list-style: none;
+        font-size: 100px;
+        text-align: center;
+        line-height: 200px;
+        background-color: rgba(0,0,0,0.6);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition-property: all;
+        -moz-transition-duration: 2s;
+    }
+    ul>li:hover{
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        box-shadow: 0 0 12px 10px #fa709a ;
+        transform: scale(2);
+
+    }
+    ul>li:nth-child(1){
+        transform: rotateY(60deg) translateZ(200px);
+    }
+    ul>li:nth-child(2){
+        transform: rotateY(120deg) translateZ(200px);
+    }
+    ul>li:nth-child(3){
+        transform: rotateY(180deg) translateZ(200px);
+    }
+    ul>li:nth-child(4){
+        transform: rotateY(240deg) translateZ(200px);
+    }
+    ul>li:nth-child(5){
+        transform: rotateY(300deg) translateZ(200px);
+    }
+    ul>li:nth-child(6){
+        transform: rotateY(360deg) translateZ(200px);
+    }
+    ul>li>img{
+        width: 195px;
+        height: 195px;
+        margin-top: 2.5px;
+    }
+    .xin{
+        width: 100px;
+        height: 100px;
+        background-image: url(image/xin.jpg);
+        background-repeat: no-repeat;
+        background-position: -490px -200px;
+        position: absolute;
+        left: 20%;
+        bottom: 20%;
+        border-radius: 100%;
+        animation: xin 10s linear 0s infinite normal;
+
+    }
+    @keyframes xin {
+            0%{
+                left: 100px; bottom: 100px;
+                opacity: 0.51;
+            }
+            20%{
+                left:30%; bottom: 30%;
+                opacity: 0;
+
+            }
+
+
+            50%{
+                left: 50%; bottom: 50%;
+                opacity: 0.5;
+            }
+            70%{
+                left: 70%; bottom: 100%;
+                opacity: 0.2;
+            }
+            100%{
+                left: 100%; bottom: 70%;
+                opacity: 0;
+            }
+
+    }
+    @keyframes rotate {
+        from{
+            transform: rotateY(0deg) rotateX(-10deg);
+
+        }
+        to{
+            transform: rotateY(360deg) rotateX(-10deg);
+
+
+        }
+
+    }
+
+</style>
+
+<body>
+<ul>
+    <li><img src="image/ship-digital-art-fantasy-art-sea-war-artwork-284278-wallhere.com.jpg" alt=""></li>
+    <li><img src="image/ship-digital-art-fantasy-art-sea-war-artwork-284278-wallhere.com.jpg" alt=""></li>
+    <li><img src="image/ship-digital-art-fantasy-art-sea-war-artwork-284278-wallhere.com.jpg" alt=""></li>
+    <li><img src="image/ship-digital-art-fantasy-art-sea-war-artwork-284278-wallhere.com.jpg" alt=""></li>
+    <li><img src="image/ship-digital-art-fantasy-art-sea-war-artwork-284278-wallhere.com.jpg" alt=""></li>
+    <li><img src="image/ship-digital-art-fantasy-art-sea-war-artwork-284278-wallhere.com.jpg" alt=""></li>
+
+</ul>
+    <div class="xin"></div>
+</body>
+</html>

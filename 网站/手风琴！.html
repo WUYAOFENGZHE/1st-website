@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴！</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        div ul{
+            width: 1000px;
+            height: 300px;
+
+            margin: 0 auto;
+            overflow: hidden;
+            list-style: none;
+        }
+        div ul li{
+            width: 200px;
+            height: 300px;
+            float: left;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+        .header img[src]{
+
+            height: 300px;
+            width: 500px;
+        }
+        div ul:hover li{
+            width: 100px;
+        }
+
+        div ul li:hover{
+            width: 500px;
+        }
+        .main{
+            margin: 50px auto;
+            width: 300px;
+            height: 400px;
+            border: 1px solid;
+            perspective: 800px;
+            transition-property: all;
+            transition-duration: 5s;
+
+
+        }
+        .main img{
+            width: 300px;
+            height: 400px;
+            transition: transform 4s;
+            transform-origin: left center;
+        }
+        .main:hover{
+            background-color: powderblue;
+        }
+        .main:hover img{
+            transform: rotateY(-180deg) scale(1.5);
+
+
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><img src="image/6ab745aec607304c89dea84367ff9b29.jpg" ></li>
+            <li><img src="image/1556079143-QkNDuJSWdC.jpg" alt=""></li>
+            <li><img src="image/573b267884947fb80f7ae94a37aaa7fc.jpeg" alt=""></li>
+            <li><img src="image/OIP-C.jfif" alt=""></li>
+            <li><img src="image/dishes.jpg" alt=""></li>
+        </ul>
+        
+    </div>
+    <div class="main"><img src="image/OIP-C.jfif" alt=""></div>
+
+        
+</body>
+</html>

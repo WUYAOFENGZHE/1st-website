@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.background>ul{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: u 5s 0s linear infinite alternate;
+}
+.background>ul>li{
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    list-style: none;
+}
+.background>ul>li:nth-child(1){
+    background-image: url("../image/cloud9.png"),url(../image/cloud7.png);
+    background-size: 100% auto;
+    background-position: 0 -80px;
+    background-repeat: no-repeat;
+    animation: one 20s 0s linear infinite alternate;
+
+}
+.background>ul>li:nth-child(2){
+    background-image: url("../image/cloud8.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -800px;
+    animation: two 30s 0s linear infinite alternate;
+}
+.background>ul>li:nth-child(3){
+    background-image: url(../image/cloud5.png);
+    background-repeat: no-repeat;
+    background-size: 1000px 400px;
+    background-position: 0 180% ;
+    opacity: 0.5;
+    animation: three 60s 0s linear infinite alternate;
+}
+@keyframes one {
+        from{
+            margin-left: 0;
+        }
+        to{
+            margin-left: -100%;
+        }
+
+}
+@keyframes two {
+    from{
+        padding-left: 0;
+    }
+    to{
+        padding-left: 200%;
+    }
+
+}
+@keyframes three {
+    0%{
+        margin-left: -300px;
+        opacity: 1;
+    }
+    25%{
+        margin-left: 100%;
+        opacity: 0;
+    }
+    50%{opacity: 1}
+    75%{opacity: 0}
+}
+
+@keyframes u {
+    from{
+        background-color: lightskyblue;
+    }
+    to{
+        background-color: black;
+    }
+
+}

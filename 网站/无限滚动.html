@@ -1,0 +1,176 @@
+    <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+
+
+
+            <title>无限滚动</title>
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                div{
+                    width: 600px;
+                    height: 188px;
+
+                    margin: 100px auto;
+                    overflow: hidden;
+                    background-color: black;
+
+
+                }
+                ul{
+                    width: 2000px;
+                    animation: move 5s linear infinite;
+
+
+                }
+                ul:hover {
+                    animation-play-state: paused;
+                }
+                ul:hover li{
+                    opacity: 0.3;
+                }
+                /*注意，此处一定要用子元素选择器，否则无效*/
+                ul>li:hover{
+                    opacity: 1;
+                }
+
+                li{
+                    width: 300px;
+                    height: 188px;
+                    float: left;
+                    list-style: none;
+
+                    border: solid;
+                    box-sizing: border-box;
+
+                }
+                li img{
+                    width: 300px;
+                    height: 188px;
+
+                }
+                @keyframes move {
+                    from{
+                        margin-left: 0;
+                    }
+                    to{
+                        margin-left: -1200px;
+                    }
+                }
+
+
+            </style>
+        </head>
+
+
+
+
+        <body>
+    <div>
+    <ul>
+    <li><img src="image/flashlight1.jpg" alt=""></li>
+    <li><img src="image/flashlight2.jpg" alt=""></li>
+    <li><img src="image/flashlight3.jpg" alt=""></li>
+    <li><img src="image/573b267884947fb80f7ae94a37aaa7fc.jpeg" alt=""></li>
+    <li><img src="image/flashlight1.jpg" alt=""></li>
+    <li><img src="image/flashlight2.jpg" alt=""></li>
+
+    </ul>
+
+
+
+    </div>
+        </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/*background box(div)*/
+.back{
+    height: 620px;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    animation: back 30s linear infinite;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}/*navigation bar*/
+.nav{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+/*two navigation box on left-top*/
+.nav>div{
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    margin-left: 2%;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 20%;
+    transition-property: all;
+    transition-duration: 3s;
+}
+.nav>div:nth-child(2){
+    margin-left: 20%;
+}
+.nav>div:hover{
+    background-color: rgba(0,0,0,0.2);
+    text-shadow: 0 0 1px #84fab0 ;
+    width: 30%;
+    height: 70%;
+    margin-left: 3%;
+
+}
+.nav>div>a{
+    font: italic bold 30px Arial;
+    text-decoration: none;
+    color: rgba(22,22,22,0.2);
+
+}
+a:active{
+    opacity: 0.3;
+
+}
+.nav>div:hover p{
+    opacity: 1;
+    text-shadow: #84fab0;
+    font-size: 20px;
+    margin-top: 0;
+}
+.nav>div:hover ul>li{
+    opacity: 1;
+    text-shadow: #84fab0;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.nav>div>p{
+    line-height: 100%;
+    opacity: 0;
+    color: rgba(0,0,0,0);
+    transition-duration: 2s;
+    transition-delay: 0ms;
+    transition-property: all;
+    width: 150%;
+    float: left;
+    height: 10%;
+    margin-left: -90px;
+    margin-top: -10px;
+
+}
+.nav>div>ul{
+
+    width: 100%;
+    height: 00%;
+}
+ul:hover li{
+
+}
+.nav>div>ul>li{
+    width: 100%;
+    line-height: 100%;
+    float: left;
+    margin-top: -10px;
+    color: rgba(0,0,0,0);
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    opacity: 0;
+
+
+}
+.main{
+   position: fixed;
+    width: 100%;
+    height: 200px;
+    display: inline-block;
+}
+.main>ul{
+
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin-left: 35%;
+    margin-top: 15%;
+    list-style: none;
+}
+.snow:hover li:before{
+    transform-origin: 100px;
+    box-shadow: 0 0 20px #00efff,
+    -200px -200px 0 #00efff,
+    -200px -200px 20px #00efff,
+    200px 200px 0 #00efff,
+    200px 200px 20px #00efff,
+    200px -200px 0 #00efff,
+    200px -200px 20px #00efff,
+    -200px 200px 0 #00efff,
+    -200px 200px 20px #00efff;
+    border-radius: 100%;
+}
+.main>ul>li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    margin-left: 0;
+    transform: rotateZ(calc(36deg*var(--i)));
+    animation: color 10s linear infinite;
+}
+.main>ul>li:before{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background:rgba(0,0,0,0.1);
+    border: 4px solid #00efff;
+    border-radius: 0;
+    box-shadow: 0 0 20px #00efff,
+    -30px -30px 0 #00efff,
+    -30px -30px 20px #00efff,
+    30px 30px 0 #00efff,
+    30px 30px 20px #00efff,
+    30px -30px 0 #00efff,
+    30px -30px 20px #00efff,
+    -30px 30px 0 #00efff,
+    -30px 30px 20px #00efff;
+    box-sizing: border-box;
+    animation: snow 5s linear infinite;
+    transition-duration: 2s;
+    animation-delay: calc(-0.25s*var(--i));
+    transition-property: all;
+    transform-origin: 10px;
+    transition-delay: calc(0.25s*var(--i));
+}
+    .nav-right{
+        width: 400px;
+        height: 600px;
+        position: relative;
+        bottom: 15%;
+        left: 100%;
+        transition-property: all;
+        transition-duration: 2s;
+        transform-origin: 0 100px;
+        border-bottom-right-radius: 20%;
+        border-top-right-radius: 20%;
+        transform-style: preserve-3d;
+    }
+    .nav-right:hover{
+        transform: rotateY(180deg);
+    }
+.nav-right:before{
+    content: "杂物间";
+    text-align: center;
+    line-height: 110px;
+    width: 100px;
+    height: 20%;
+    position: absolute;
+    right: 105%;
+    top: 0;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    font-size: 30px;
+    text-shadow: 2px 2px 3px #fa709a;
+    color: rgba(22,22,22,0);
+    border: 5px  solid  #00efff;
+    box-shadow: 0 0 30px #00efff;
+}
+    .nav-right>li{
+        width: 100%;
+        height: 25%;
+        border-bottom: solid #fa709a;
+        float: right;
+        list-style: none;
+        font: bolder 40px Arial;
+        text-align: center;
+        line-height: 150px;
+        transform: rotateY(180deg);
+        border-radius: 20%;
+        opacity: 0.3;
+    }
+    .nav-right>li:hover{
+        opacity: 1;
+        border: 3px #84fab0 solid;
+        box-sizing: border-box;
+    }
+    .nav-right>li>a{
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .nav-right>li:nth-child(1){
+        background-image: url(../image/artwork-digital-art-storm-lightning-ship-sea-2013395-wallhere.com.jpg);
+        background-size: cover;
+    }
+    .nav-right>li:nth-child(2){
+        background-image: url(../image/cloud8.png);
+        background-size: cover;
+    }
+    .nav-right>li:nth-child(3){
+        background-image: url(../image/circle-ball.PNG);
+        background-size: cover;
+    }
+.nav-right>li:nth-child(4){
+    background-image: url(../image/firework.jpg);
+    background-size: cover;
+}
+
+    .aside{
+        width: 300px;
+        height: 300px;
+        background-color: rgba(0,0,0,0.2);
+        position: absolute;
+        left: 2%;
+        top: 40%;
+        clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+        background-image: url(../image/flashlight.png);
+        background-size: 180% 180%;
+        animation: flash 10s infinite linear;
+    }
+    .rain-g{
+        transition-property: all;
+        transition-duration: 3s;
+        transform-origin: bottom;
+        perspective: 200px;
+        transform-style: preserve-3d;
+        opacity: 0.5;
+    }
+    .aside:hover .rain-g{
+        transform: rotateX(90deg);
+    }
+    .aside a{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+
+    }
+    .right{
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        padding-left: 5%;
+    }
+    .right:after{
+        content: "wuyaofengzhe@163.com";
+        position: absolute;
+        width: 200px;
+        height: 20px;
+        left: 0;
+        top: 40%;
+        transition-property: all;
+        transition-duration: 1s;
+        color: rgba(0,0,0,0);
+        z-index: -3;
+        transition-timing-function: linear;
+        font: bolder 30px Arial;
+    }
+     .right:hover.right:after {
+         left: -30%;
+         color: rgba(0,0,0,0.5);
+         text-shadow: 1px 1px 5px #09203f;
+
+    }
+    .right>li{
+        float: right;
+        width: 30%;
+        height: 100%;
+        list-style: none;
+        transition-property: all;
+        transition-duration: 1.5s;
+        transition-timing-function: linear;
+        border-radius: 20%;
+        text-align: center;
+        padding-top: 20%;
+        letter-spacing: 6px;
+        color: rgba(0,0,0,0);
+        box-shadow: 10px 10px 20px #09203f;
+    }
+    .right:hover li{
+        width: 20%;
+        transform: rotate(45deg);
+
+    }
+    .right>li:hover{
+        width: 60%;
+        transform: rotate(0);
+        background-color: rgba(0,0,0,0.5);
+        perspective: 100px;
+        color: #84fab0;
+        box-shadow: 2px 2px 50px #fa709a;
+        text-shadow: 2px 2px 5px #00efff;
+    }
+/*background color rotates animation*/
+@keyframes back {
+    0%,100%{
+        filter:hue-rotate(0deg);
+    }
+    50%{
+        filter:hue-rotate(360deg);
+    }
+}
+@keyframes snow {
+    0%{
+        transform: rotate(0);
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+}
+@keyframes flash {
+    0%{
+        background-position: 0 0;
+        opacity: 0;
+    }
+
+    50%{
+        background-position: 100% -50%;
+        opacity: 1;
+    }
+    100%{
+        background-position: 50% -100%;
+        opacity: 0;
+    }
+
+}
